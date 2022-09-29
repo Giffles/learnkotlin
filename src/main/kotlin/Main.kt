@@ -386,8 +386,8 @@ println("Fuck you, $userName")
 */
 
 
-val test = 0
-fun main(args: Array<String>) {
+//val test = 0
+//fun main(args: Array<String>) {
 
     /*
      println("Please enter a number")
@@ -432,7 +432,7 @@ fun main(args: Array<String>) {
     }  finally {
         println("Transaction completed")
     }
- */
+
 
 
 
@@ -451,5 +451,330 @@ fun main(args: Array<String>) {
         println("transaction complete")
     }
 
+       */
 
-   }
+   fun main(args: Array<String>) {
+
+      /*
+      val colors = listOf("blue", "red", "yellow", "blue", "blue", null)
+      println(colors)
+
+      val colors2 = listOf<String>()
+      println(colors2)
+      println(colors[0])
+      println(colors.size)
+      
+
+
+      var colors = arrayListOf("blue", "red")
+      var noColors = arrayListOf<String>()
+      colors.add("yellow")
+      var moreColors = arrayListOf("pink", "teal")
+      colors.addAll(moreColors)
+      colors.remove("red")
+      colors.removeAll(moreColors)
+      colors.removeAt(1)
+      colors.add("orange")
+      colors.add("blue")
+      colors.remove("blue")
+      println(colors)
+
+
+
+
+      var animalList = listOf("dog", "cat", "giraffe", "cheetah")
+      println(animalList.size)
+      println(animalList[1])
+
+
+      var customers = arrayListOf("customer1", "customer2", "customer3", "customer4")
+      customers.add("customer5")
+      customers.remove("customer3")
+      println(customers)
+
+
+
+      val items = arrayListOf("laptop", "mouse", "pen", "paper", "mug", "phone")
+      val removedItems = listOf("pen", "paper", "mug", "phone")
+      items.removeAll(removedItems)
+      println(items)
+
+
+      val colors = listOf("blue", "red", "blue", "green")
+      println(colors.size)
+      println(colors.contains ("red"))
+      println(colors.contains("pink"))
+
+      val newColors = listOf("red", "green", "teal")
+      println(colors.containsAll(newColors))
+
+      println(colors.indexOf ("blue"))
+      println(colors.lastIndexOf("blue"))
+
+
+      val colors = arrayListOf("blue", "red", "blue", "green")
+      colors.set(1, "redder")
+      println(colors)
+
+      val subColors = colors.subList(1, 3)
+      println(subColors)
+      println(subColors::class.java)
+
+      colors.clear()
+      println(colors)
+
+      println(colors.isEmpty())
+
+
+
+       val winners = listOf("Usain", "john", "Mike", "Alex", "Bob")
+      println("Mike finished on place ${winners.indexOf("Mike") + 1}")
+
+
+        val printable = listOf("red", "green", "blue")
+        val availableColors = listOf("red", "blue", "green")
+       println("Can print: ${availableColors.containsAll(printable)}")
+     
+
+
+       val recipe = arrayListOf("Chicken", "Egg", "Mozzarella", "Pepper")
+       println(recipe)
+       recipe.remove("Mozzarella")
+       recipe.add("Blue cheese")
+       println(recipe)
+
+
+
+        val recipe = arrayListOf("Chicken", "Egg", "Mozzarella", "Pepper")
+       recipe[recipe.indexOf("Mozzarella")] = "Blue cheese"
+       println(recipe)
+
+
+
+
+        val animals = arrayListOf("lion", "zebra", "chimp", "elephant")
+       animals.add("panda bear cub")
+       println(animals)
+       animals.remove("lion")
+       println(animals)
+
+       val compareAnimals = listOf("elephant", "giraffe")
+       val hasAllAnimals = animals.containsAll(compareAnimals)
+
+       println("Does the zoo have both elephants and giraffes? $hasAllAnimals")
+
+
+
+       val numbers = setOf(6, 66, 6, 22)
+       println(numbers)
+
+
+
+       var colors = hashSetOf<String>()
+       var colorList = listOf("red", "green", "blue")
+       colors.addAll(colorList)
+       colors.remove("green")
+       println(colors)
+
+
+       var deskObjects = hashSetOf("glass", "mouse", "snus", "bottle", "book")
+       var removableObjects = setOf("glass", "bottle", "book")
+       deskObjects.removeAll(removableObjects)
+       println(deskObjects)
+
+
+       var customers = hashSetOf<String>("a", "b", "c")
+       println("input name of joining customer")
+       val newCustomer = readLine()?:""
+       customers.add(newCustomer)
+       println(customers)
+       println("please enter the name of the customer that has chosen to leave")
+       val leavingCustomer = readLine()
+       customers.remove(leavingCustomer)
+       println(customers)
+
+
+        val numbers = setOf(3, 4, null, 55)
+        numbers.size
+        println(numbers.contains(55))
+        println(numbers.contains(57))
+
+        val newNumbers = setOf(4, 55)
+      println(numbers.containsAll(setOf(3, 4)))
+      println(numbers.isEmpty())
+      println(setOf<Int>().isEmpty())
+
+
+      val numbers = hashSetOf(1, 2, 3, 4, 5)
+      val newNumbers = setOf(3, 4, 5, 6, 7)
+      numbers.retainAll(newNumbers)
+      println(numbers)
+      numbers.clear()
+      println(numbers)
+      println(numbers.isEmpty())
+
+
+
+     val numbers = setOf(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
+     println("Is the number 21 a prime number? : ${numbers.contains(21)}")
+     println("Is the number 13 a prime number? : ${numbers.contains(13)}")
+
+
+
+      val myDrinks = hashSetOf("water", "coke", "beer", "orange juice")
+      val theirDrinks = hashSetOf("water", "orange juice", "pinapple juice", "milk")
+      myDrinks.retainAll(theirDrinks)
+      println("Drinks that we both enjoy are : $myDrinks")
+
+
+
+
+
+      val acceptedColors = hashSetOf("white", "black", "grey")
+      val myColors = hashSetOf("blue", "red", "black", "green")
+      acceptedColors.retainAll(myColors)
+      println("I can only wear $acceptedColors")
+      acceptedColors.add("red")
+      acceptedColors.retainAll(myColors)
+      println("I can now wear $acceptedColors")
+
+
+
+
+
+     val count = mapOf(Pair(1, "one"), Pair(2, "two"), Pair(3, "three"))
+      println(count)
+      val count2 = mapOf<Int, String>()
+
+      println(count.get(2))
+      println(count[2])
+
+      println(count.keys)
+
+      println(count.values)
+
+
+       val count = hashMapOf(Pair(1, "one"), Pair(2, "two"), Pair(3, "three"))
+      count.put(4, "four")
+      println(count)
+
+      var countMore = hashMapOf(Pair(20, "twenty"), Pair(30, "thirty"))
+      count.putAll(countMore)
+      println(count)
+
+      count.remove(20)
+      println(count)
+
+      count.replace(2, "twotwo")
+      println(count)
+
+      count.clear()
+      println(count)
+
+
+
+
+
+      val count = hashMapOf(Pair(1, "one"), Pair(2, "two"), Pair(3, "three"))
+
+      println("This map has a size of ${count.size}")
+      println("does the map have the key 2? : ${count.containsKey(2)}")
+      println("does the map have the key 5? : ${count.containsKey(5)}")
+      println("Does the map have the value \"one\"? : ${count.containsValue("one")}")
+      println("Does the map have the value \"five\"? : ${count.containsValue("five")}")
+
+      println("Is the map empty? : ${count.isEmpty()}")
+      println("Does the map have any key value pairs? : ${count.isNotEmpty()}")
+
+
+
+
+       var count = hashMapOf(Pair(1, "un"), Pair(2, "deux"), Pair(3, "trois"))
+      count.replace(2, "two")
+      count.replace(3, "three")
+      count.put(4, "quatre")
+      println(count)
+
+
+
+      val customers = hashMapOf(Pair("John", 1), Pair("Alice", 5), Pair("Bob", 3))
+      println("Is Alice a customer? : ${customers.containsKey("Alice")}")
+      println("Alice bought ${customers.get("Alice")} products")
+      println("Is Michael a customer? : ${customers.containsKey("Michael")}")
+
+
+
+      var attendance = hashMapOf(Pair("23 Sept", 2837), Pair("24 Sept", 3726), Pair("25 Sept", 6253))
+      attendance.put("26 Sept", 1337)
+
+
+      var attendance25 = attendance.getValue("25 Sept")
+      var attendance26 = attendance.getValue("26 Sept")
+
+      println("How many people attended in total on 25 and 26 Sept? : ${attendance25 + attendance26} people")
+
+      println("Is data for 22 Sept available? : ${attendance.containsKey("22 Sept")}")
+
+
+
+      println("Input a boolean value. Is it nighttime?")
+      val input = readLine()?:"true"
+      val night = input.toBoolean()
+
+      if(night) {
+         println("Sleep, it's nighttime")
+      } else {
+         println("Be active, it's daytime")
+      }
+
+
+
+
+      println("Please input the funds amount")
+      val input = readLine()?:""
+      var clientFunds = input.toInt()
+
+      val price = 50
+      var clientProducts = 0
+
+      if( clientFunds > price ) {
+         clientFunds -= price
+         clientProducts += 1
+         println("You have purchased $clientProducts products")
+         println("You have $clientFunds funds remaining")
+      } else {
+         println("You have insufficient funds to purchase the product")
+      }
+
+
+*/
+
+      val petStore = listOf("cat", "dog", "rabbit")
+      val hasCatFood = true
+
+      if(petStore.contains("cat")) {
+         if(hasCatFood) {
+            println("Buy cat and cat food")
+         } else {
+            println("Buy cat only")
+         }
+      } else {
+         println("Ask the pet store owner to get a cat")
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+
+
